@@ -10,6 +10,14 @@
 	font-weight: 800;
 }
 
+.navbar {
+	margin-bottom: 0px;
+}
+
+#footer-text {
+	padding-top:5px;
+}
+
 /*** Index Main ***/
 
 .intro-body {
@@ -23,5 +31,9 @@
 }
 
 .icon {
-	margin-left: 20px;
+	margin-left: -20px;
+}
+
+.push-down {
+	margin-bottom: 20px;
 }

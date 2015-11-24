@@ -6,9 +6,40 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+<nav class="navbar">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Photos Of My Cat</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Something else</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <%= link_to "Sign up", root_path, :class => 'navbar-link'  %> |
+	  	<%= link_to "Login", root_path, :class => 'navbar-link'  %>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
 <body>
 
 <%= yield %>
 
+<footer>
+	<div class="container-fluid">
+		<div class="col-md-12">
+			<p id="footer-text">Catpyright@2015</p>
+		</div>
+	</div>
+</footer>
 </body>
 </html>
