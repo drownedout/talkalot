@@ -1,4 +1,4 @@
-<div class="intro-body">
+<div class="intro-body push-down">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 text-center">
@@ -6,15 +6,39 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-12 col-md-offset-4">
+			<div class="col-md-12 text-center">
 				<%= image_tag("talkacat", alt: "Talk Logo", class: "icon") %>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-md-12 text-center">
 				<h1>Because you need another social media site!</h1>
-				<h2 class="push-down">Sign Up Today!</h2>
+				<%= link_to "Sign Up Today!", new_user_registration_path, :class => "btn btn-primary btn-lg push-down" %>
 			</div>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12 text-center push-down">
+			<h1>Check out our amazing features!</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4 text-center">
+			<%= image_tag("social.png", alt: "Social") %> 
+			<h4>Sociability</h4>
+			<p>Argue with your peers about things that don't matter. Express your xenophobic views only reserved for the Thanksgiving table. Berate the president for being a socialist foreigner who is clearly the antichrist.</p>
+		</div>
+		<div class="col-md-4 text-center">
+			<%= image_tag("scale.png", alt: "Social") %> 
+			<h4>Scalability</h4>
+			<p>Honestly, this site is going to be a shitshow once we exceed any measurable amount of users.</p>
+		</div>
+		<div class="col-md-4 text-center">
+			<%= image_tag("security.png", alt: "Social") %> 
+			<h4>Security</h4>
+			<p>Your password might be encrypted. Aside from that, our security is paper-thin!</p>
 		</div>
 	</div>
 </div>

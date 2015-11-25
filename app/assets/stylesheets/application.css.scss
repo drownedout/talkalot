@@ -10,8 +10,16 @@
 	font-weight: 800;
 }
 
+.panel {
+	border: 0;
+}
+
 .navbar {
-	margin-bottom: 0px;
+	margin-bottom: 2px;
+}
+
+.navbar-right {
+	padding-top: 12px;
 }
 
 #footer-text {
@@ -21,17 +29,13 @@
 /*** Index Main ***/
 
 .intro-body {
-	background-color: #60C3AC;
+	background-color: #2fabe8;
+	color: #ffffff;
 }
 
 .intro {
 	font-size: 120px;
 	font-family: 'bubbleboddy', sans-serif;
-	color: #093E44;
-}
-
-.icon {
-	margin-left: -20px;
 }
 
 .push-down {
