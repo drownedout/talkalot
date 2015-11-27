@@ -10,8 +10,17 @@
 	font-weight: 800;
 }
 
+p {
+	font-weight: 400;
+}
+
 .panel {
 	border: 0;
+}
+
+.overlay {
+	position:absolute;
+	z-index:1;
 }
 
 .navbar {
@@ -19,7 +28,15 @@
 }
 
 .navbar-right {
-	padding-top: 12px;
+	padding-top: 11px;
+}
+
+.navbar-link {
+	font-size: 20px;
+}
+
+.dropdown-toggle {
+	font-size: 20px;
 }
 
 #footer-text {

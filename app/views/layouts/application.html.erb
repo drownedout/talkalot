@@ -24,15 +24,19 @@
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-	  	  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+        <% if user_signed_in? %>
+          <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link' %>
+        <% else %>
+          <%= link_to "Sign up | ", new_user_registration_path, :class => 'navbar-link'  %>
+  	  	  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+        <% end %>
       </ul>
     </div>
   </div>
 </nav>
 <body>
   <% flash.each do |name, msg| %>
-    <%= content_tag(:div, msg, class: "alert alert-info") %>
+    <%= content_tag(:div, msg, class: "alert alert-info overlay") %>
   <% end %>
 <%= yield %>
 
@@ -42,6 +46,7 @@
 			<p id="footer-text"></p>
 		</div>
 	</div>
+  <script type="text/javascript">$(".overlay").fadeOut(2000);</script>
 </footer>
 </body>
 </html>
