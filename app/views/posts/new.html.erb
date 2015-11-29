@@ -1,0 +1,26 @@
+<div class="container">
+	<%= simple_form_for @post do |f| %>
+	<%= f.error_notification %>
+	<div class="row">
+		<div class="col-md-4">
+			<div class="form-inputs">
+				<div class="panel panel-default">
+					<div class="panel-body">	
+						
+						<div class="form-group">
+							<%= f.label :content, "content" %>
+							<%= f.text_area :content, label: "content", class: "form-control" %>
+						</div>
+						
+						<div class="form-action">
+							<%= f.button :submit, class: "btn btn-primary" %>
+						</div>
+
+						<% end %>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

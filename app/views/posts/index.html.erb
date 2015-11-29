@@ -1,0 +1,15 @@
+<div class="container">
+<% @posts.each do |post| %>
+	<div class="row text-center">
+		<div class="col-md-12">
+			<h4><%= post.user.username %></h4>
+		</div>
+		<div class="col-md-8">
+			<p><%= post.content %></p>
+		</div>
+		<div class="col-md-4">
+			<%= link_to "Delete", post_path(post.id), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-sm btn-danger" %>
+		</div>
+	</div>
+<% end %>
+</div>
