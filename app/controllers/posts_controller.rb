@@ -2,21 +2,20 @@ class PostsController < ApplicationController
 	before_action :find_post, only: [:show, :edit, :update, :destroy]
 
 	def index
-		@posts = Post.all
-	end
+		@posts = Post.order("id DESC").all
 
-	def show
-	end
-
-	def new
-		@post = current_user.posts.build
+		if user_signed_in?
+			@post = current_user.posts.build
+		else
+			render "New"
+		end
 	end
 
 	def create
 		@post = current_user.posts.build(post_params)
 
 		if @post.save
-			redirect_to root_path
+			redirect_to action: "index"
 		else
 			render "New"
 		end
@@ -35,7 +34,7 @@ class PostsController < ApplicationController
 
 	def destroy
 		@post.destroy
-		redirect_to root_path
+		redirect_to :back
 	end
 
 	private
